@@ -22,7 +22,7 @@
               href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap">
     </noscript>
 
-    <!-- لو تحتاج Font Awesome في الصفحة الرئيسية، استخدم النسخة المؤجلة -->
+    <!-- لو تحتاج Font Awesome فعلاً فعّل هذا (حالياً ملغي لتحسين السرعة) -->
     <!--
     <link rel="preload" 
           href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" 
@@ -157,6 +157,18 @@
             <rect x="3" y="5" width="18" height="14" rx="2"></rect>
             <polyline points="4 6 12 13 20 6"></polyline>
         </symbol>
+
+        <!-- أيقونة مينو (هامبرغر) -->
+        <symbol id="icon-menu" viewBox="0 0 24 24">
+            <line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+            <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+            <line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+        </symbol>
+
+        <!-- سهم صغير للقائمة -->
+        <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+        </symbol>
     </svg>
 
     <!-- Header -->
@@ -176,7 +188,9 @@
             </div>
             
             <button class="mobile-menu-toggle" aria-label="القائمة" aria-expanded="false">
-                <i class="fas fa-bars" aria-hidden="true"></i>
+                <svg width="24" height="24" aria-hidden="true">
+                    <use href="#icon-menu"></use>
+                </svg>
             </button>
             
             <nav aria-label="القائمة الرئيسية">
@@ -185,7 +199,9 @@
                     <li class="dropdown">
                         <a href="services.html">
                             خدماتنا
-                            <i class="fas fa-chevron-down" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                            <svg style="width: 0.9rem; height: 0.9rem; vertical-align: middle; margin-inline-start: 0.25rem;" aria-hidden="true">
+                                <use href="#icon-chevron-down"></use>
+                            </svg>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="absher-passport-services-jeddah.html">خدمات الجوازات وأبشر</a></li>
@@ -465,7 +481,7 @@
                             </svg>
                         </div>
                         <div class="contact-text">
-                            <h4>واتساب</h4>
+                            <h3>واتساب</h3>
                             <p>
                                 <a href="https://wa.me/966579142377" target="_blank" rel="noopener">966579142377</a>
                             </p>
@@ -479,7 +495,7 @@
                             </svg>
                         </div>
                         <div class="contact-text">
-                            <h4>الموقع</h4>
+                            <h3>الموقع</h3>
                             <p>جدة – المملكة العربية السعودية</p>
                         </div>
                     </div>
@@ -491,7 +507,7 @@
                             </svg>
                         </div>
                         <div class="contact-text">
-                            <h4>ساعات العمل</h4>
+                            <h3>ساعات العمل</h3>
                             <p>9 صباحاً – 11 مساءً</p>
                         </div>
                     </div>
@@ -606,7 +622,7 @@
     </footer>
 
     <!-- JavaScript -->
-<script src="js/main.js" defer></script>
+    <script src="js/main.js" defer></script>
 
 </body>
 </html>
